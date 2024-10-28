@@ -7,10 +7,12 @@ Library     String
 
 *** Test Cases ***
 API CALL
-    ${GET_MSG}  JSON API GET METHOD     #Running Keywords (function call) and storing retrun value in MSG variable.
+    ${GET_MSG}  JSON API GET METHOD     #Running Keywords (function call) and storing retrun value in GET_MSG variable.
     Log    The title is ${GET_MSG}
-    ${POST_MSG}  JSON API POST METHOD     #Running Keywords (function call) and storing retrun value in MSG variable.
+    ${POST_MSG}  JSON API POST METHOD     #Running Keywords (function call) and storing retrun value in POST_MSG variable.
     Log    ${POST_MSG}
+    ${POST_BASIC_AUTH_MSG}  JSON API BASIC AAUTHORIZATION     #Running Keywords (function call) and storing retrun value in POST_BASIC_AUTH_MSG variable.
+    Log    ${POST_BASIC_AUTH_MSG}
 
 *** Keywords ***
 JSON API GET METHOD
@@ -34,6 +36,21 @@ JSON API POST METHOD
     Create Session    mysession    https://thetestingworldapi.com/api    verify=True
     ${request_body}    Get File    .\\config\\api\\JSON\\StudentDetailsPost.json
     ${request_header}    Create Dictionary    Content-Type=application/json
+    ${response}    POST On Session    mysession    /studentsDetails    data=${request_body}    headers=${request_header}    expected_status=any
+    TRY
+        Should Be Equal As Strings    ${response.status_code}    201
+        ${response_content}    Set Variable    ${response.content}
+        ${MSG}  Set Variable    ${response_content}
+    EXCEPT
+        ${MSG}  Set Variable    ${response.status_code}
+    END
+    RETURN  ${MSG}
+    
+JSON API BASIC AAUTHORIZATION
+    [Tags]      robot:continue-on-failure
+    Create Session    mysession    https://thetestingworldapi.com/api    verify=True
+    ${request_body}    Get File    .\\config\\api\\JSON\\StudentDetailsPost.json
+    ${request_header}    Create Dictionary  Authorozation=Basic username:passowrd    Content-Type=application/json
     ${response}    POST On Session    mysession    /studentsDetails    data=${request_body}    headers=${request_header}    expected_status=any
     TRY
         Should Be Equal As Strings    ${response.status_code}    201
