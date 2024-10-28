@@ -7,8 +7,10 @@ Library     String
 
 *** Test Cases ***
 API CALL
-    ${MSG}  JSON API GET METHOD     #Running Keywords (function call) and storing retrun value in MSG variable.
-    Log    The title is ${MSG}
+    ${GET_MSG}  JSON API GET METHOD     #Running Keywords (function call) and storing retrun value in MSG variable.
+    Log    The title is ${GET_MSG}
+    ${POST_MSG}  JSON API POST METHOD     #Running Keywords (function call) and storing retrun value in MSG variable.
+    Log    ${POST_MSG}
 
 *** Keywords ***
 JSON API GET METHOD
@@ -22,9 +24,22 @@ JSON API GET METHOD
         ${response_content}    Convert String To Json    ${response_content}
         ${Title}    Get Value From Json    ${response_content}    title
         ${MSG}  Set Variable    ${Title}
-        Log To Console    ${MSG}
     ELSE
         ${MSG}  Set Variable    Oh no API failed :)
-        Log To Console    ${MSG}
+    END
+    RETURN  ${MSG}
+
+JSON API POST METHOD
+    [Tags]    robot:continue-on-failure
+    Create Session    mysession    https://thetestingworldapi.com/api    verify=True
+    ${request_body}    Get File    .\\config\\api\\JSON\\StudentDetailsPost.json
+    ${request_header}    Create Dictionary    Content-Type=application/json
+    ${response}    POST On Session    mysession    /studentsDetails    data=${request_body}    headers=${request_header}    expected_status=any
+    TRY
+        Should Be Equal As Strings    ${response.status_code}    201
+        ${response_content}    Set Variable    ${response.content}
+        ${MSG}  Set Variable    ${response_content}
+    EXCEPT
+        ${MSG}  Set Variable    ${response.status_code}
     END
     RETURN  ${MSG}
