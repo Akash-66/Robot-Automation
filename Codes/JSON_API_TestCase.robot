@@ -11,7 +11,7 @@ API CALL
     Log    The title is ${GET_MSG}
     ${POST_MSG}  JSON API POST METHOD     #Running Keywords (function call) and storing retrun value in POST_MSG variable.
     Log    ${POST_MSG}
-    ${POST_BASIC_AUTH_MSG}  JSON API BASIC AAUTHORIZATION     #Running Keywords (function call) and storing retrun value in POST_BASIC_AUTH_MSG variable.
+    ${POST_BASIC_AUTH_MSG}  JSON API BASIC AUTHORIZATION     #Running Keywords (function call) and storing retrun value in POST_BASIC_AUTH_MSG variable.
     Log    ${POST_BASIC_AUTH_MSG}
 
 *** Keywords ***
@@ -46,11 +46,11 @@ JSON API POST METHOD
     END
     RETURN  ${MSG}
     
-JSON API BASIC AAUTHORIZATION
+JSON API BASIC AUTHORIZATION
     [Tags]      robot:continue-on-failure
     Create Session    mysession    https://thetestingworldapi.com/api    verify=True
     ${request_body}    Get File    .\\config\\api\\JSON\\StudentDetailsPost.json
-    ${request_header}    Create Dictionary  Authorozation=Basic username:passowrd    Content-Type=application/json
+    ${request_header}    Create Dictionary  Authorization=Basic username:passowrd    Content-Type=application/json
     ${response}    POST On Session    mysession    /studentsDetails    data=${request_body}    headers=${request_header}    expected_status=any
     TRY
         Should Be Equal As Strings    ${response.status_code}    201
