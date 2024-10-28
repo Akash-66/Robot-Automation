@@ -1,129 +1,125 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2024-10-28T19:32:50.070634" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2024-10-28T20:01:10.212910" rpa="false" schemaversion="5">
 <suite id="s1" name="TestCase" source="D:\Robot Automation PyCharm\robotAutomation\Codes\TestCase.robot">
 <test id="s1-t1" name="API CALL" line="9">
-<kw name="JSON API GET METHOD">
+<kw name="JSON API POST METHOD">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-10-28T19:32:50.332506" level="INFO">Creating Session using : alias=mysession, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2024-10-28T20:01:10.588946" level="INFO">Creating Session using : alias=mysession, url=https://thetestingworldapi.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>mysession</arg>
-<arg>https://jsonplaceholder.typicode.com</arg>
+<arg>https://thetestingworldapi.com/api</arg>
 <arg>verify=True</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-10-28T19:32:50.332506" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-28T20:01:10.588946" elapsed="0.005770"/>
 </kw>
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-10-28T19:32:50.993504" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/1 
- path_url=/todos/1 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
- body=None 
- </msg>
-<msg time="2024-10-28T19:32:50.993504" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/1 
- status=200, reason=OK 
- headers={'Date': 'Mon, 28 Oct 2024 14:02:50 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1729553148&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=umX1weR8brgkww2VHVOlSPIcNjn%2FvdLqg4dppLHBfaw%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1729553148&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=umX1weR8brgkww2VHVOlSPIcNjn%2FvdLqg4dppLHBfaw%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1729553187', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '23803', 'Server': 'cloudflare', 'CF-RAY': '8d9b77418e4241b9-MRS', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=143994&amp;sent=6&amp;recv=8&amp;lost=0&amp;retrans=1&amp;sent_bytes=4123&amp;recv_bytes=785&amp;delivery_rate=6913&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=d4128bfb31679724&amp;ts=350&amp;x=0"'} 
- body={
-  "userId": 1,
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-10-28T20:01:10.595838" level="INFO" html="true">Getting file '&lt;a href="file://D:\Robot Automation PyCharm\robotAutomation\config\api\JSON\StudentDetailsPost.json"&gt;D:\Robot Automation PyCharm\robotAutomation\config\api\JSON\StudentDetailsPost.json&lt;/a&gt;'.</msg>
+<msg time="2024-10-28T20:01:10.597347" level="INFO">${request_body} = {
   "id": 1,
-  "title": "delectus aut autem",
-  "completed": false
+  "first_name": "Akash",
+  "middle_name": "NA",
+  "last_name": "Kesarwani",
+  "date_of_birth": "1997"
+}</msg>
+<var>${request_body}</var>
+<arg>.\\config\\api\\JSON\\StudentDetailsPost.json</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-10-28T20:01:10.595838" elapsed="0.001509"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-10-28T20:01:10.598460" level="INFO">${request_header} = {'Content-Type': 'application/json'}</msg>
+<var>${request_header}</var>
+<arg>Content-Type=application/json</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-10-28T20:01:10.598460" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-10-28T20:01:11.652814" level="INFO">POST Request : url=https://thetestingworldapi.com/api/studentsDetails 
+ path_url=/api/studentsDetails 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '116'} 
+ body={
+  "id": 1,
+  "first_name": "Akash",
+  "middle_name": "NA",
+  "last_name": "Kesarwani",
+  "date_of_birth": "1997"
 } 
  </msg>
-<msg time="2024-10-28T19:32:50.993504" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<msg time="2024-10-28T20:01:11.652814" level="INFO">POST Response : url=https://thetestingworldapi.com/api/studentsDetails 
+ status=201, reason=Created 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Location': 'https://thetestingworldapi.com/api/studentsDetails/10423836', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Mon, 28 Oct 2024 14:31:02 GMT', 'Content-Length': '102'} 
+ body={"id":10423836,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"} 
+ </msg>
+<msg time="2024-10-28T20:01:11.652814" level="INFO">${response} = &lt;Response [201]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
-<arg>/todos/1</arg>
+<arg>/studentsDetails</arg>
+<arg>data=${request_body}</arg>
+<arg>headers=${request_header}</arg>
 <arg>expected_status=any</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-10-28T19:32:50.332506" elapsed="0.660998"/>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-10-28T20:01:10.598460" elapsed="1.054354"/>
 </kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-28T19:32:50.993504" level="INFO">${response_status} = 200</msg>
-<var>${response_status}</var>
+<try>
+<branch type="TRY">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-10-28T20:01:11.657655" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-28T19:32:50.993504" elapsed="0.000000"/>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-10-28T20:01:11.656106" elapsed="0.001549"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response_status}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-28T19:32:50.993504" elapsed="0.000000"/>
-</kw>
-<if>
-<branch type="IF" condition="$response_status==200">
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-28T19:32:51.009082" level="INFO">${response_content} = {
-  "userId": 1,
-  "id": 1,
-  "title": "delectus aut autem",
-  "completed": false
-}</msg>
+<msg time="2024-10-28T20:01:11.658801" level="INFO">${response_content} = {"id":10423836,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
 <var>${response_content}</var>
 <arg>${response.content}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-28T19:32:51.009082" elapsed="0.000000"/>
-</kw>
-<kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-10-28T19:32:51.009082" level="INFO">${response_content} = {'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}</msg>
-<var>${response_content}</var>
-<arg>${response_content}</arg>
-<doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-10-28T19:32:51.009082" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-10-28T19:32:51.040269" level="INFO">${Title} = ['delectus aut autem']</msg>
-<var>${Title}</var>
-<arg>${response_content}</arg>
-<arg>title</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-10-28T19:32:51.009082" elapsed="0.031187"/>
+<status status="PASS" start="2024-10-28T20:01:11.657655" elapsed="0.001146"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-10-28T19:32:51.040269" level="INFO">${MSG} = ['delectus aut autem']</msg>
+<msg time="2024-10-28T20:01:11.658801" level="INFO">${MSG} = API Passed.</msg>
 <var>${MSG}</var>
-<arg>${Title}</arg>
+<arg>API Passed.</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-10-28T19:32:51.040269" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-28T20:01:11.658801" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${MSG}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-10-28T19:32:51.040269" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-10-28T19:32:50.993504" elapsed="0.046765"/>
+<status status="PASS" start="2024-10-28T20:01:11.655587" elapsed="0.003214"/>
 </branch>
-<branch type="ELSE">
+<branch type="EXCEPT">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>${response.status_code}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="NOT RUN" start="2024-10-28T20:01:11.658801" elapsed="0.000000"/>
+</kw>
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>Oh no API failed :)</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-10-28T19:32:51.040269" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-10-28T20:01:11.658801" elapsed="0.000000"/>
 </kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${MSG}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="NOT RUN" start="2024-10-28T19:32:51.040269" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-10-28T19:32:51.040269" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-10-28T20:01:11.658801" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-10-28T19:32:50.993504" elapsed="0.046765"/>
-</if>
+<status status="PASS" start="2024-10-28T20:01:11.655587" elapsed="0.003214"/>
+</try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-10-28T19:32:51.040269" elapsed="0.015622"/>
+<status status="PASS" start="2024-10-28T20:01:11.658801" elapsed="0.000000"/>
 </return>
-<msg time="2024-10-28T19:32:51.055891" level="INFO">${MSG} = ['delectus aut autem']</msg>
-<var>${MSG}</var>
+<msg time="2024-10-28T20:01:11.658801" level="INFO">${POST_MSG} = API Passed.</msg>
+<var>${POST_MSG}</var>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-10-28T19:32:50.332506" elapsed="0.723385"/>
+<status status="PASS" start="2024-10-28T20:01:10.588391" elapsed="1.070410"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-10-28T19:32:51.055891" level="INFO">The title is ['delectus aut autem']</msg>
-<arg>The title is ${MSG}</arg>
+<msg time="2024-10-28T20:01:11.658801" level="INFO">API Passed.</msg>
+<arg>${POST_MSG}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-10-28T19:32:51.055891" elapsed="0.000000"/>
+<status status="PASS" start="2024-10-28T20:01:11.658801" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-10-28T19:32:50.332506" elapsed="0.723385"/>
+<status status="PASS" start="2024-10-28T20:01:10.583602" elapsed="1.083221"/>
 </test>
-<status status="PASS" start="2024-10-28T19:32:50.070634" elapsed="0.985257"/>
+<status status="PASS" start="2024-10-28T20:01:10.218303" elapsed="1.451043"/>
 </suite>
 <statistics>
 <total>
