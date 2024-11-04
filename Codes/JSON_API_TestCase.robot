@@ -9,11 +9,16 @@ Library     base64
 *** Test Cases ***
 API CALL
     ${GET_MSG}  JSON API GET METHOD     #Running Keywords (function call) and storing retrun value in GET_MSG variable.
-    Log    The title is ${GET_MSG}
+        Log    The title is ${GET_MSG}
+
     ${POST_MSG}  JSON API POST METHOD     #Running Keywords (function call) and storing retrun value in POST_MSG variable.
-    Log    ${POST_MSG}
+        Log    ${POST_MSG}
+
+    ${POST_BASIC_AUTH_MSG}  JSON API BASIC AUTHORIZATION     #Running Keywords (function call) and storing retrun value in POST_BASIC_AUTH_MSG variable.
+        Log    ${POST_BASIC_AUTH_MSG}
+
     ${POST_BEARER_AUTH_MSG}  JSON API BEARER AUTHORIZATION     #Running Keywords (function call) and storing retrun value in POST_BEARER_AUTH_MSG variable.
-    Log    ${POST_BEARER_AUTH_MSG}
+        Log    ${POST_BEARER_AUTH_MSG}
 
 *** Keywords ***
 JSON API GET METHOD
@@ -47,6 +52,15 @@ JSON API POST METHOD
     END
     RETURN  ${MSG}
     
+JSON API BASIC AUTHORIZATION
+    [Tags]      robot:continue-on-failure
+    Create Session    mysession    https://dummyjson.com    verify=True
+    ${user_credentials}    Convert To Bytes    emilys:emilyspass    #your username:your passowrd
+    ${user_credentials}     Evaluate    base64.b64encode($user_credentials)     base64
+    ${request_header}    Create Dictionary      Authorization=Basic ${user_credentials}    Content-Type=application/json
+    ${MSG}  Set Variable    above request_header having basic authorization
+    RETURN  ${MSG}
+
 JSON API BEARER AUTHORIZATION
     [Tags]      robot:continue-on-failure
     Create Session    mysession    https://dummyjson.com    verify=True
