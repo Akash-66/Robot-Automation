@@ -13,7 +13,6 @@ API CALL
         Log    ${POST_MSG}
 
 *** Keywords ***
-
 SOAP API POST METHOD
     [Tags]    robot:continue-on-failure
     ${request_xml}    Get File    .\\config\\api\\XML\\StudentDetailsPost.xml
