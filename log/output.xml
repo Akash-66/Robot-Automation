@@ -1,439 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2024-11-04T19:31:57.315113" rpa="false" schemaversion="5">
-<suite id="s1" name="JSON API TestCase" source="E:\GitHub\Robot-Automation\Codes\JSON_API_TestCase.robot">
-<test id="s1-t1" name="API CALL" line="10">
-<kw name="JSON API GET METHOD">
+<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2024-11-04T19:46:37.159178" rpa="false" schemaversion="5">
+<suite id="s1" name="XML API TestCase" source="E:\GitHub\Robot-Automation\Codes\XML_API_TestCase.robot">
+<test id="s1-t1" name="API CALL" line="8">
+<kw name="SOAP API GET METHOD">
 <kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:31:57.562890" level="INFO">Creating Session using : alias=mysession, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<msg time="2024-11-04T19:46:37.316316" level="INFO">Creating Session using : alias=mysession, url=https://thetestingworldapi.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
 <arg>mysession</arg>
-<arg>https://jsonplaceholder.typicode.com</arg>
-<arg>verify=True</arg>
+<arg>https://thetestingworldapi.com/api</arg>
+<arg>verify=true</arg>
 <doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-11-04T19:31:57.550876" elapsed="0.012014"/>
+<status status="PASS" start="2024-11-04T19:46:37.316316" elapsed="0.000000"/>
 </kw>
 <kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:31:58.448025" level="INFO">GET Request : url=https://jsonplaceholder.typicode.com/todos/1 
- path_url=/todos/1 
+<msg time="2024-11-04T19:46:37.866641" level="INFO">GET Request : url=https://thetestingworldapi.com/api/studentsDetails 
+ path_url=/api/studentsDetails 
  headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
  body=None 
  </msg>
-<msg time="2024-11-04T19:31:58.448025" level="INFO">GET Response : url=https://jsonplaceholder.typicode.com/todos/1 
+<msg time="2024-11-04T19:46:37.866641" level="INFO">GET Response : url=https://thetestingworldapi.com/api/studentsDetails 
  status=200, reason=OK 
- headers={'Date': 'Mon, 04 Nov 2024 14:01:59 GMT', 'Content-Type': 'application/json; charset=utf-8', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1730446040&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=aB02gLZY%2Bj%2FuIGcTffxSRUIssoFq%2BE5vs%2B9ahHTV4HA%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1730446040&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=aB02gLZY%2Bj%2FuIGcTffxSRUIssoFq%2BE5vs%2B9ahHTV4HA%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'X-Powered-By': 'Express', 'X-Ratelimit-Limit': '1000', 'X-Ratelimit-Remaining': '999', 'X-Ratelimit-Reset': '1730446089', 'Vary': 'Origin, Accept-Encoding', 'Access-Control-Allow-Credentials': 'true', 'Cache-Control': 'max-age=43200', 'Pragma': 'no-cache', 'Expires': '-1', 'X-Content-Type-Options': 'nosniff', 'Etag': 'W/"53-hfEnumeNh6YirfjyjaujcOPPT+s"', 'Via': '1.1 vegur', 'CF-Cache-Status': 'HIT', 'Age': '23670', 'Server': 'cloudflare', 'CF-RAY': '8dd523a13ee1e232-MRS', 'Content-Encoding': 'gzip', 'alt-svc': 'h3=":443"; ma=86400', 'server-timing': 'cfL4;desc="?proto=TCP&amp;rtt=209815&amp;sent=5&amp;recv=6&amp;lost=0&amp;retrans=0&amp;sent_bytes=2841&amp;recv_bytes=785&amp;delivery_rate=20366&amp;cwnd=252&amp;unsent_bytes=0&amp;cid=94f13e2851057f15&amp;ts=218&amp;x=0"'} 
- body={
-  "userId": 1,
-  "id": 1,
-  "title": "delectus aut autem",
-  "completed": false
-} 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Mon, 04 Nov 2024 14:16:23 GMT', 'Content-Length': '11281'} 
+ body=[{"id":10490525,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"},{"id":10490524,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"},{"id":10490523,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"},{"id":10490522,"first_name":"Rubel","middle_name":"Hosain","last_name":"Riyon","date_of_birth":"04-03-1995"},{"id":10490521,"first_name":"Rubel","middle_name":"Hosain","last_name":"Riyon","date_of_birth":"04-03-1995"},{"id":10490520,"first_name":"Rubel","middle_name":"Hosain","last_name":"Riyon","date_of_birth":"04-03-1995"},{"id":10490519,"first_name":"sample ","middle_name":"sample ","last_name":"sample ","date_of_birth":"sample "},{"id":10490518,"first_name":"sample ","middle_name":"sample ","last_name":"sample ","date_of_birth":"sample "},{"id":10490517,"first_name":"sample ","middle_name":"sample ","last_name":"sample ","date_of_birth":"sample "},{"id":10490516,"first_name":"sample ","middle_name":"sample ","last_name":"sample ","date_of_birth":"sample "},{"id":10490515,"first_name":"Changi","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"10/10/2020"},{"id":10490514,"first_name":"Changi","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"10/10/2020"},{"id":10490513,"first_name":"Changi","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"10/10/2020"},{"id":10490512,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"10/10/2020"},{"id":10490511,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"10/10/2020"},{"id":10490510,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"10/10/2020"},{"id":10490509,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":10490508,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":10490507,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":10490506,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":10490505,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":10490504,"first_name":"sample string 2","middle_name":"sample string 3","last_name":"sample string 4","date_of_birth":"sample string 5"},{"id":10490503,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490502,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490501,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490500,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490499,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490498,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490496,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490495,"first_name":"maryna","middle_name":"Joanna","last_name":"O'Connell","date_of_birth":"2023-01-22"},{"id":10490494,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490493,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490492,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490491,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490490,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490489,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490487,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490486,"first_name":"Dupa","middle_name":"Joanna","last_name":"Schiller","date_of_birth":"2023-01-22"},{"id":10490485,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490484,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490483,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490482,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490481,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490480,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490478,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490477,"first_name":"Gabi","middle_name":"Joanna","last_name":"Thiel","date_of_birth":"2023-01-22"},{"id":10490476,"first_name":"Testing1","middle_name":"K1","last_name":"World1","date_of_birth":"sample string 6"},{"id":10490475,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490474,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490473,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490472,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490471,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490470,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490468,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490467,"first_name":"maryna","middle_name":"Joanna","last_name":"Douglas","date_of_birth":"2021-02-03"},{"id":10490466,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490465,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490464,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490463,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490462,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490461,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490459,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490458,"first_name":"Dupa","middle_name":"Joanna","last_name":"Hegmann","date_of_birth":"2021-02-03"},{"id":10490457,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490456,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490455,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490454,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490453,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490452,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490450,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490449,"first_name":"Gabi","middle_name":"Joanna","last_name":"Wehner","date_of_birth":"2021-02-03"},{"id":10490448,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490447,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490446,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490445,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490444,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490443,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490441,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490440,"first_name":"maryna","middle_name":"Joanna","last_name":"Fritsch","date_of_birth":"2021-02-03"},{"id":10490439,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490438,"first_name":"","middle_name":"","last_name":"","date_of_birth":""},{"id":10490437,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490436,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490435,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490434,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490432,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Duża","date_of_birth":"1986-11-10"},{"id":10490431,"first_name":"Dupa","middle_name":"Joanna","last_name":"Bartell","date_of_birth":"2021-02-03"},{"id":10490430,"first_name":"Katarzyna","middle_name":"Joanna","last_name":"Wielka","date_of_birth":"2021-02-03"},{"id":10490429,"first_name... (set the log level to DEBUG or TRACE to see the full content) 
  </msg>
-<msg time="2024-11-04T19:31:58.464119" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/todos/1</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-11-04T19:31:57.562890" elapsed="0.901229"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:31:58.464119" level="INFO">${response_status} = 200</msg>
-<var>${response_status}</var>
-<arg>${response.status_code}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.000000"/>
-</kw>
-<kw name="Log To Console" owner="BuiltIn">
-<arg>${response_status}</arg>
-<doc>Logs the given message to the console.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.000000"/>
-</kw>
-<if>
-<branch type="IF" condition="$response_status==200">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:31:58.464119" level="INFO">${response_content} = {
-  "userId": 1,
-  "id": 1,
-  "title": "delectus aut autem",
-  "completed": false
-}</msg>
-<var>${response_content}</var>
-<arg>${response.content}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.000000"/>
-</kw>
-<kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-11-04T19:31:58.464119" level="INFO">${response_content} = {'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}</msg>
-<var>${response_content}</var>
-<arg>${response_content}</arg>
-<doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-11-04T19:31:58.526669" level="INFO">${Title} = ['delectus aut autem']</msg>
-<var>${Title}</var>
-<arg>${response_content}</arg>
-<arg>title</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.062550"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:31:58.526669" level="INFO">${MSG} = ['delectus aut autem']</msg>
-<var>${MSG}</var>
-<arg>${Title}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.526669" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.062550"/>
-</branch>
-<branch type="ELSE">
-<kw name="Set Variable" owner="BuiltIn">
-<var>${MSG}</var>
-<arg>Oh no API failed :)</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-04T19:31:58.526669" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-11-04T19:31:58.526669" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-11-04T19:31:58.464119" elapsed="0.062550"/>
-</if>
-<return>
-<value>${MSG}</value>
-<status status="PASS" start="2024-11-04T19:31:58.526669" elapsed="0.000000"/>
-</return>
-<msg time="2024-11-04T19:31:58.526669" level="INFO">${GET_MSG} = ['delectus aut autem']</msg>
-<var>${GET_MSG}</var>
-<tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-04T19:31:57.550876" elapsed="0.975793"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T19:31:58.526669" level="INFO">The title is ['delectus aut autem']</msg>
-<arg>The title is ${GET_MSG}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.526669" elapsed="0.000000"/>
-</kw>
-<kw name="JSON API POST METHOD">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:31:58.526669" level="INFO">Creating Session using : alias=mysession, url=https://thetestingworldapi.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>https://thetestingworldapi.com/api</arg>
-<arg>verify=True</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-11-04T19:31:58.526669" elapsed="0.000000"/>
-</kw>
-<kw name="Get File" owner="OperatingSystem">
-<msg time="2024-11-04T19:31:58.526669" level="INFO" html="true">Getting file '&lt;a href="file://E:\GitHub\Robot-Automation\config\api\JSON\StudentDetailsPost.json"&gt;E:\GitHub\Robot-Automation\config\api\JSON\StudentDetailsPost.json&lt;/a&gt;'.</msg>
-<msg time="2024-11-04T19:31:58.542258" level="INFO">${request_body} = {
-  "id": 1,
-  "first_name": "Akash",
-  "middle_name": "NA",
-  "last_name": "Kesarwani",
-  "date_of_birth": "1997"
-}</msg>
-<var>${request_body}</var>
-<arg>.\\config\\api\\JSON\\StudentDetailsPost.json</arg>
-<doc>Returns the contents of a specified file.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.526669" elapsed="0.015589"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-11-04T19:31:58.542258" level="INFO">${request_header} = {'Content-Type': 'application/json'}</msg>
-<var>${request_header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.542258" elapsed="0.000000"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:32:17.937122" level="INFO">POST Request : url=https://thetestingworldapi.com/api/studentsDetails 
- path_url=/api/studentsDetails 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '116'} 
- body={
-  "id": 1,
-  "first_name": "Akash",
-  "middle_name": "NA",
-  "last_name": "Kesarwani",
-  "date_of_birth": "1997"
-} 
- </msg>
-<msg time="2024-11-04T19:32:17.937122" level="INFO">POST Response : url=https://thetestingworldapi.com/api/studentsDetails 
- status=201, reason=Created 
- headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Location': 'https://thetestingworldapi.com/api/studentsDetails/10490523', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Mon, 04 Nov 2024 14:02:03 GMT', 'Content-Length': '102'} 
- body={"id":10490523,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"} 
- </msg>
-<msg time="2024-11-04T19:32:17.937122" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<msg time="2024-11-04T19:46:37.866641" level="INFO">${response} = &lt;Response [200]&gt;</msg>
 <var>${response}</var>
 <arg>mysession</arg>
 <arg>/studentsDetails</arg>
-<arg>data=${request_body}</arg>
-<arg>headers=${request_header}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-11-04T19:31:58.542258" elapsed="19.394864"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.937122" level="INFO">Argument types are:
-&lt;class 'int'&gt;
-&lt;class 'str'&gt;</msg>
-<arg>${response.status_code}</arg>
-<arg>201</arg>
-<doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.937122" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${response_content} = {"id":10490523,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
-<var>${response_content}</var>
-<arg>${response.content}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.937122" elapsed="0.015625"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${MSG} = {"id":10490523,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
-<var>${MSG}</var>
-<arg>${response_content}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<status status="PASS" start="2024-11-04T19:32:17.937122" elapsed="0.015625"/>
-</branch>
-<branch type="EXCEPT">
-<kw name="Set Variable" owner="BuiltIn">
-<var>${MSG}</var>
-<arg>${response.status_code}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<status status="NOT RUN" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</branch>
-<status status="PASS" start="2024-11-04T19:32:17.937122" elapsed="0.015625"/>
-</try>
-<return>
-<value>${MSG}</value>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</return>
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${POST_MSG} = {"id":10490523,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
-<var>${POST_MSG}</var>
-<tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-04T19:31:58.526669" elapsed="19.426078"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">{"id":10490523,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
-<arg>${POST_MSG}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="JSON API BASIC AUTHORIZATION">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">Creating Session using : alias=mysession, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>https://dummyjson.com</arg>
-<arg>verify=True</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Convert To Bytes" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${user_credentials} = emilys:emilyspass</msg>
-<var>${user_credentials}</var>
-<arg>emilys:emilyspass</arg>
-<doc>Converts the given ``input`` to bytes according to the ``input_type``.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Evaluate" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${user_credentials} = ZW1pbHlzOmVtaWx5c3Bhc3M=</msg>
-<var>${user_credentials}</var>
-<arg>base64.b64encode($user_credentials)</arg>
-<arg>base64</arg>
-<doc>Evaluates the given expression in Python and returns the result.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${request_header} = {'Authorization': 'Basic ZW1pbHlzOmVtaWx5c3Bhc3M=', 'Content-Type': 'application/json'}</msg>
-<var>${request_header}</var>
-<arg>Authorization=Basic ${user_credentials}</arg>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${MSG} = above request_header having basic authorization</msg>
-<var>${MSG}</var>
-<arg>above request_header having basic authorization</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<return>
-<value>${MSG}</value>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</return>
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${POST_BASIC_AUTH_MSG} = above request_header having basic authorization</msg>
-<var>${POST_BASIC_AUTH_MSG}</var>
-<tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">above request_header having basic authorization</msg>
-<arg>${POST_BASIC_AUTH_MSG}</arg>
-<doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="JSON API BEARER AUTHORIZATION">
-<kw name="Create Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">Creating Session using : alias=mysession, url=https://dummyjson.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
-<arg>mysession</arg>
-<arg>https://dummyjson.com</arg>
-<arg>verify=True</arg>
-<doc>Create Session: create a HTTP session to a server</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${request_body} = {'username': 'emilys', 'password': 'emilyspass', 'expiresInMins': '30'}</msg>
-<var>${request_body}</var>
-<arg>username=emilys</arg>
-<arg>password=emilyspass</arg>
-<arg>expiresInMins=30</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Convert Json To String" owner="JSONLibrary">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${request_body} = {"username": "emilys", "password": "emilyspass", "expiresInMins": "30"}</msg>
-<var>${request_body}</var>
-<arg>${request_body}</arg>
-<doc>Convert JSON object to string</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-11-04T19:32:17.952747" level="INFO">${request_header} = {'Content-Type': 'application/json'}</msg>
-<var>${request_header}</var>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="0.000000"/>
-</kw>
-<kw name="POST On Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:32:19.199323" level="INFO">POST Request : url=https://dummyjson.com/auth/login 
- path_url=/auth/login 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Content-Length': '71'} 
- body={"username": "emilys", "password": "emilyspass", "expiresInMins": "30"} 
- </msg>
-<msg time="2024-11-04T19:32:19.199323" level="INFO">POST Response : url=https://dummyjson.com/auth/login 
- status=200, reason=OK 
- headers={'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1730728939&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=p%2FIOijSzxAG8So2Xl9olM5MYtYPPLJ0sBn9o%2BwIsQUs%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1730728939&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=p%2FIOijSzxAG8So2Xl9olM5MYtYPPLJ0sBn9o%2BwIsQUs%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Powered-By': 'Cats on Keyboards', 'Server': 'BobTheBuilder', 'X-Ratelimit-Limit': '100', 'X-Ratelimit-Remaining': '99', 'Date': 'Mon, 04 Nov 2024 14:02:19 GMT', 'X-Ratelimit-Reset': '1730728945', 'Set-Cookie': 'accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMDczMDczOX0.GFH1qUHuXdhysm0XZrCz0oHJv7FPitOX2zkMAusyCIc; Max-Age=1800; Path=/; Expires=Mon, 04 Nov 2024 14:32:19 GMT; HttpOnly; Secure, refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMzMyMDkzOX0.nhh3wPpC2iWZEVausCl2RcJhDJry5J3pt5HT9CXq_Wk; Max-Age=1800; Path=/; Expires=Mon, 04 Nov 2024 14:32:19 GMT; HttpOnly; Secure', 'Content-Type': 'application/json; charset=utf-8', 'Content-Length': '930', 'Etag': 'W/"3a2-0by5biJj6NsP/51J4r2mnNw63aQ"', 'Vary': 'Accept-Encoding', 'Via': '1.1 vegur'} 
- body={"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMDczMDczOX0.GFH1qUHuXdhysm0XZrCz0oHJv7FPitOX2zkMAusyCIc","refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMzMyMDkzOX0.nhh3wPpC2iWZEVausCl2RcJhDJry5J3pt5HT9CXq_Wk","id":1,"username":"emilys","email":"emily.johnson@x.dummyjson.com","firstName":"Emily","lastName":"Johnson","gender":"female","image":"https://dummyjson.com/icon/emilys/128"} 
- </msg>
-<msg time="2024-11-04T19:32:19.199323" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/auth/login</arg>
-<arg>data=${request_body}</arg>
-<arg>headers=${request_header}</arg>
-<arg>expected_status=any</arg>
-<doc>Sends a POST request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="1.246576"/>
-</kw>
-<try>
-<branch type="TRY">
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:32:19.199323" level="INFO">${response_content} = {"accessToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJ...</msg>
-<var>${response_content}</var>
-<arg>${response.content}</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.199323" elapsed="0.000000"/>
-</kw>
-<kw name="Convert String To Json" owner="JSONLibrary">
-<msg time="2024-11-04T19:32:19.199323" level="INFO">${response_content} = {'accessToken': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLC...</msg>
-<var>${response_content}</var>
-<arg>${response_content}</arg>
-<doc>Convert String to JSON object</doc>
-<status status="PASS" start="2024-11-04T19:32:19.199323" elapsed="0.000000"/>
-</kw>
-<kw name="Get Value From Json" owner="JSONLibrary">
-<msg time="2024-11-04T19:32:19.208834" level="INFO">${token} = ['eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZ...</msg>
-<var>${token}</var>
-<arg>${response_content}</arg>
-<arg>accessToken</arg>
-<doc>Get Value From JSON using JSONPath</doc>
-<status status="PASS" start="2024-11-04T19:32:19.199323" elapsed="0.009511"/>
-</kw>
-<kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:32:19.208834" level="INFO">${token} = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1...</msg>
-<var>${token}</var>
-<arg>${token}[0]</arg>
-<doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.208834" elapsed="0.000000"/>
-</kw>
-<kw name="Create Dictionary" owner="BuiltIn">
-<msg time="2024-11-04T19:32:19.224469" level="INFO">${request_header} = {'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6Ikpva...</msg>
-<var>${request_header}</var>
-<arg>Authorization=Bearer ${token}</arg>
-<arg>Content-Type=application/json</arg>
-<doc>Creates and returns a dictionary based on the given ``items``.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.208834" elapsed="0.015635"/>
-</kw>
-<kw name="GET On Session" owner="RequestsLibrary">
-<msg time="2024-11-04T19:32:19.601970" level="INFO">GET Request : url=https://dummyjson.com/auth/me 
- path_url=/auth/me 
- headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMDczMDczOX0.GFH1qUHuXdhysm0XZrCz0oHJv7FPitOX2zkMAusyCIc', 'Content-Type': 'application/json', 'Cookie': 'accessToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMDczMDczOX0.GFH1qUHuXdhysm0XZrCz0oHJv7FPitOX2zkMAusyCIc; refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwidXNlcm5hbWUiOiJlbWlseXMiLCJlbWFpbCI6ImVtaWx5LmpvaG5zb25AeC5kdW1teWpzb24uY29tIiwiZmlyc3ROYW1lIjoiRW1pbHkiLCJsYXN0TmFtZSI6IkpvaG5zb24iLCJnZW5kZXIiOiJmZW1hbGUiLCJpbWFnZSI6Imh0dHBzOi8vZHVtbXlqc29uLmNvbS9pY29uL2VtaWx5cy8xMjgiLCJpYXQiOjE3MzA3Mjg5MzksImV4cCI6MTczMzMyMDkzOX0.nhh3wPpC2iWZEVausCl2RcJhDJry5J3pt5HT9CXq_Wk'} 
- body=None 
- </msg>
-<msg time="2024-11-04T19:32:19.601970" level="INFO">GET Response : url=https://dummyjson.com/auth/me 
- status=200, reason=OK 
- headers={'Report-To': '{"group":"heroku-nel","max_age":3600,"endpoints":[{"url":"https://nel.heroku.com/reports?ts=1730728940&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=9%2Fb30pgilpOnP6kV00Jq8QDXzaPkYcmU1XdC0yC%2BQJU%3D"}]}', 'Reporting-Endpoints': 'heroku-nel=https://nel.heroku.com/reports?ts=1730728940&amp;sid=e11707d5-02a7-43ef-b45e-2cf4d2036f7d&amp;s=9%2Fb30pgilpOnP6kV00Jq8QDXzaPkYcmU1XdC0yC%2BQJU%3D', 'Nel': '{"report_to":"heroku-nel","max_age":3600,"success_fraction":0.005,"failure_fraction":0.05,"response_headers":["Via"]}', 'Connection': 'keep-alive', 'Access-Control-Allow-Origin': '*', 'X-Dns-Prefetch-Control': 'off', 'X-Frame-Options': 'SAMEORIGIN', 'Strict-Transport-Security': 'max-age=15552000; includeSubDomains', 'X-Download-Options': 'noopen', 'X-Content-Type-Options': 'nosniff', 'X-Xss-Protection': '1; mode=block', 'X-Powered-By': 'Cats on Keyboards', 'Server': 'BobTheBuilder', 'X-Ratelimit-Limit': '100', 'X-Ratelimit-Remaining': '99', 'Date': 'Mon, 04 Nov 2024 14:02:20 GMT', 'X-Ratelimit-Reset': '1730728945', 'Content-Type': 'application/json; charset=utf-8', 'Etag': 'W/"57b-eBF3JfwanM/U4Wy609CPdIf9zRA"', 'Vary': 'Accept-Encoding', 'Content-Encoding': 'gzip', 'Transfer-Encoding': 'chunked', 'Via': '1.1 vegur'} 
- body={"id":1,"firstName":"Emily","lastName":"Johnson","maidenName":"Smith","age":28,"gender":"female","email":"emily.johnson@x.dummyjson.com","phone":"+81 965-431-3024","username":"emilys","password":"emilyspass","birthDate":"1996-5-30","image":"https://dummyjson.com/icon/emilys/128","bloodGroup":"O-","height":193.24,"weight":63.16,"eyeColor":"Green","hair":{"color":"Brown","type":"Curly"},"ip":"42.48.100.32","address":{"address":"626 Main Street","city":"Phoenix","state":"Mississippi","stateCode":"MS","postalCode":"29112","coordinates":{"lat":-77.16213,"lng":-92.084824},"country":"United States"},"macAddress":"47:fa:41:18:ec:eb","university":"University of Wisconsin--Madison","bank":{"cardExpire":"03/26","cardNumber":"9289760655481815","cardType":"Elo","currency":"CNY","iban":"YPUXISOBI7TTHPK2BR3HAIXL"},"company":{"department":"Engineering","name":"Dooley, Kozey and Cronin","title":"Sales Manager","address":{"address":"263 Tenth Street","city":"San Francisco","state":"Wisconsin","stateCode":"WI","postalCode":"37657","coordinates":{"lat":71.814525,"lng":-161.150263},"country":"United States"}},"ein":"977-175","ssn":"900-590-289","userAgent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/96.0.4664.93 Safari/537.36","crypto":{"coin":"Bitcoin","wallet":"0xb9fc2fe63b2a6c003f1c324c3bfa53259162181a","network":"Ethereum (ERC20)"},"role":"admin"} 
- </msg>
-<msg time="2024-11-04T19:32:19.601970" level="INFO">${response} = &lt;Response [200]&gt;</msg>
-<var>${response}</var>
-<arg>mysession</arg>
-<arg>/auth/me</arg>
-<arg>headers=${request_header}</arg>
-<arg>expected_status=any</arg>
 <doc>Sends a GET request on a previously created HTTP Session.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.224469" elapsed="0.377501"/>
+<status status="PASS" start="2024-11-04T19:46:37.316316" elapsed="0.550325"/>
 </kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-04T19:46:37.866641" level="INFO">${response_status} = &lt;Response [200]&gt;</msg>
+<var>${response_status}</var>
+<arg>${response}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-04T19:46:37.866641" elapsed="0.000000"/>
+</kw>
+<try>
+<branch type="TRY">
 <kw name="Should Be Equal As Strings" owner="BuiltIn">
-<msg time="2024-11-04T19:32:19.601970" level="INFO">Argument types are:
+<msg time="2024-11-04T19:46:37.866641" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;class 'str'&gt;</msg>
 <arg>${response.status_code}</arg>
 <arg>200</arg>
 <doc>Fails if objects are unequal after converting them to strings.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.601970" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T19:46:37.866641" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-04T19:32:19.601970" level="INFO">${MSG} = 200</msg>
+<msg time="2024-11-04T19:46:37.866641" level="INFO">${MSG} = 200</msg>
 <var>${MSG}</var>
 <arg>${response.status_code}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.601970" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T19:46:37.866641" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-04T19:32:19.199323" elapsed="0.402647"/>
+<status status="PASS" start="2024-11-04T19:46:37.866641" elapsed="0.000000"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>${response.status_code}</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-04T19:32:19.601970" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-04T19:46:37.866641" elapsed="0.015491"/>
 </kw>
-<status status="NOT RUN" start="2024-11-04T19:32:19.601970" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-04T19:46:37.866641" elapsed="0.015491"/>
 </branch>
-<status status="PASS" start="2024-11-04T19:32:19.199323" elapsed="0.402647"/>
+<status status="PASS" start="2024-11-04T19:46:37.866641" elapsed="0.015491"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-04T19:32:19.601970" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.000000"/>
 </return>
-<msg time="2024-11-04T19:32:19.601970" level="INFO">${POST_BEARER_AUTH_MSG} = 200</msg>
-<var>${POST_BEARER_AUTH_MSG}</var>
+<msg time="2024-11-04T19:46:37.882132" level="INFO">${GET_MSG} = 200</msg>
+<var>${GET_MSG}</var>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-04T19:32:17.952747" elapsed="1.649223"/>
+<status status="PASS" start="2024-11-04T19:46:37.316316" elapsed="0.565816"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-04T19:32:19.601970" level="INFO">200</msg>
-<arg>${POST_BEARER_AUTH_MSG}</arg>
+<msg time="2024-11-04T19:46:37.882132" level="INFO">200</msg>
+<arg>${GET_MSG}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-04T19:32:19.601970" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-04T19:31:57.550876" elapsed="22.051094"/>
+<kw name="SOAP API POST METHOD">
+<kw name="Get File" owner="OperatingSystem">
+<msg time="2024-11-04T19:46:37.882132" level="INFO" html="true">Getting file '&lt;a href="file://E:\GitHub\Robot-Automation\config\api\XML\StudentDetailsPost.xml"&gt;E:\GitHub\Robot-Automation\config\api\XML\StudentDetailsPost.xml&lt;/a&gt;'.</msg>
+<msg time="2024-11-04T19:46:37.882132" level="INFO">${request_xml} = &lt;studentsDetail xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/WebApiOauth2.Models"&gt;
+  &lt;date_of_birth&gt;1997&lt;/date_of_birth&gt;
+  &lt;first_name&gt;Akash&lt;/firs...</msg>
+<var>${request_xml}</var>
+<arg>.\\config\\api\\XML\\StudentDetailsPost.xml</arg>
+<doc>Returns the contents of a specified file.</doc>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.000000"/>
+</kw>
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2024-11-04T19:46:37.882132" level="INFO">Creating Session using : alias=mysession, url=https://thetestingworldapi.com/api, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=True,                     debug=0 </msg>
+<arg>mysession</arg>
+<arg>https://thetestingworldapi.com/api</arg>
+<arg>verify=true</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.000000"/>
+</kw>
+<kw name="Create Dictionary" owner="BuiltIn">
+<msg time="2024-11-04T19:46:37.882132" level="INFO">${request_header} = {'Content-Type': 'application/xml'}</msg>
+<var>${request_header}</var>
+<arg>Content-Type=application/xml</arg>
+<doc>Creates and returns a dictionary based on the given ``items``.</doc>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.000000"/>
+</kw>
+<kw name="POST On Session" owner="RequestsLibrary">
+<msg time="2024-11-04T19:46:38.149806" level="INFO">POST Request : url=https://thetestingworldapi.com/api/studentsDetails 
+ path_url=/api/studentsDetails 
+ headers={'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/xml', 'Content-Length': '305'} 
+ body=&lt;studentsDetail xmlns:i="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.datacontract.org/2004/07/WebApiOauth2.Models"&gt;
+  &lt;date_of_birth&gt;1997&lt;/date_of_birth&gt;
+  &lt;first_name&gt;Akash&lt;/first_name&gt;
+  &lt;id&gt;1&lt;/id&gt;
+  &lt;last_name&gt;Kesarwani&lt;/last_name&gt;
+  &lt;middle_name&gt;NA&lt;/middle_name&gt;
+&lt;/studentsDetail&gt; 
+ </msg>
+<msg time="2024-11-04T19:46:38.149806" level="INFO">POST Response : url=https://thetestingworldapi.com/api/studentsDetails 
+ status=201, reason=Created 
+ headers={'Cache-Control': 'no-cache', 'Pragma': 'no-cache', 'Content-Type': 'application/json; charset=utf-8', 'Expires': '-1', 'Location': 'https://thetestingworldapi.com/api/studentsDetails/10490526', 'Server': 'Microsoft-IIS/10.0', 'X-AspNet-Version': '4.0.30319', 'X-Powered-By': 'ASP.NET', 'X-Powered-By-Plesk': 'PleskWin', 'Date': 'Mon, 04 Nov 2024 14:16:23 GMT', 'Content-Length': '102'} 
+ body={"id":10490526,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"} 
+ </msg>
+<msg time="2024-11-04T19:46:38.149806" level="INFO">${response} = &lt;Response [201]&gt;</msg>
+<var>${response}</var>
+<arg>mysession</arg>
+<arg>/studentsDetails</arg>
+<arg>data=${request_xml}</arg>
+<arg>headers=${request_header}</arg>
+<arg>expected_status=any</arg>
+<doc>Sends a POST request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.267674"/>
+</kw>
+<try>
+<branch type="TRY">
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2024-11-04T19:46:38.149806" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>201</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-04T19:46:38.149806" level="INFO">${response_content} = {"id":10490526,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
+<var>${response_content}</var>
+<arg>${response.content}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</kw>
+<kw name="Set Variable" owner="BuiltIn">
+<msg time="2024-11-04T19:46:38.149806" level="INFO">${MSG} = {"id":10490526,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
+<var>${MSG}</var>
+<arg>${response_content}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</branch>
+<branch type="EXCEPT">
+<kw name="Set Variable" owner="BuiltIn">
+<var>${MSG}</var>
+<arg>${response.status_code}</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="NOT RUN" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</kw>
+<status status="NOT RUN" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</branch>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</try>
+<return>
+<value>${MSG}</value>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</return>
+<msg time="2024-11-04T19:46:38.149806" level="INFO">${POST_MSG} = {"id":10490526,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
+<var>${POST_MSG}</var>
+<tag>robot:continue-on-failure</tag>
+<status status="PASS" start="2024-11-04T19:46:37.882132" elapsed="0.267674"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2024-11-04T19:46:38.149806" level="INFO">{"id":10490526,"first_name":"Akash","middle_name":"NA","last_name":"Kesarwani","date_of_birth":"1997"}</msg>
+<arg>${POST_MSG}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2024-11-04T19:46:38.149806" elapsed="0.000000"/>
+</kw>
+<status status="PASS" start="2024-11-04T19:46:37.316316" elapsed="0.833490"/>
 </test>
-<status status="PASS" start="2024-11-04T19:31:57.315113" elapsed="22.286857"/>
+<status status="PASS" start="2024-11-04T19:46:37.159178" elapsed="0.990628"/>
 </suite>
 <statistics>
 <total>
@@ -442,7 +199,7 @@
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="0" skip="0" id="s1" name="JSON API TestCase">JSON API TestCase</stat>
+<stat pass="1" fail="0" skip="0" id="s1" name="XML API TestCase">XML API TestCase</stat>
 </suite>
 </statistics>
 <errors>
