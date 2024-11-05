@@ -2,6 +2,7 @@
 Library     RequestsLibrary
 Library     ExcellentLibrary
 Library     ExcelLibrary
+Library    Collections
 
 *** Test Cases ***
 Keywords Call
@@ -20,7 +21,11 @@ Keywords Call
                 WRITE_EXCEL_ROW_DATA    EXCEL_NAME=.\\config\\excel\\Excel_Sheet.xlsx      ROW_NUM=5    DATA=${ROW_VALUE_4}  ID=excel_1
 
             ${ALL_EXCEL_SHEET_DATA}     READ_EXCEL_SHEET_DATA     EXCEL_PATH=.\\config\\excel\\Excel_Sheet.xlsx     #Reading all Excel data
-            Log    ${ALL_EXCEL_SHEET_DATA}
+            ${END}     Get Length    ${ALL_EXCEL_SHEET_DATA}
+            FOR    ${counter}    IN RANGE    1    ${END}    ++1
+                Log    ${ALL_EXCEL_SHEET_DATA}[${counter}]
+
+            END
         ELSE
             Log    CREATE_EXCEL_WORKBOOK method failed!!
         END
