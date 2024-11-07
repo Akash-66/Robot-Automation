@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2024-11-05T20:14:05.988823" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2024-11-05T20:19:39.208933" rpa="false" schemaversion="5">
 <suite id="s1" name="EXCEL TestCase" source="E:\GitHub\Robot-Automation\Codes\EXCEL_TestCase.robot">
 <test id="s1-t1" name="Keywords Call" line="8">
 <kw name="CREATE_EXCEL_WORKBOOK">
@@ -9,56 +9,56 @@
 <arg>file_path=${EXCEL_PATH}</arg>
 <arg>overwrite_file_if_exists=True</arg>
 <doc>Creates a new workbook and saves it to the given file path.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.879182" elapsed="0.015671"/>
+<status status="PASS" start="2024-11-05T20:19:39.852183" elapsed="0.015586"/>
 </kw>
 <kw name="Save" owner="ExcellentLibrary">
 <doc>Saves the changes to the currently active workbook.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.894853" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.867769" elapsed="0.000000"/>
 </kw>
 <kw name="Close Workbook" owner="ExcellentLibrary">
 <doc>Closes the workbook identified by the supplied alias.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.894853" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.867769" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.894853" level="INFO">${MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.883431" level="INFO">${MSG} = PASS</msg>
 <var>${MSG}</var>
 <arg>PASS</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.894853" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.867769" elapsed="0.015662"/>
 </kw>
-<status status="PASS" start="2024-11-05T20:14:06.879182" elapsed="0.015671"/>
+<status status="PASS" start="2024-11-05T20:19:39.852183" elapsed="0.031248"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>FAILED</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:06.894853" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.883431" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:06.894853" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.883431" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.879182" elapsed="0.015671"/>
+<status status="PASS" start="2024-11-05T20:19:39.852183" elapsed="0.031248"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:06.894853" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.000000"/>
 </return>
-<msg time="2024-11-05T20:14:06.894853" level="INFO">${CREATE_EXCEL_WORKBOOK_MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.883431" level="INFO">${CREATE_EXCEL_WORKBOOK_MSG} = PASS</msg>
 <var>${CREATE_EXCEL_WORKBOOK_MSG}</var>
 <arg>EXCEL_PATH=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:06.879182" elapsed="0.015671"/>
+<status status="PASS" start="2024-11-05T20:19:39.852183" elapsed="0.031248"/>
 </kw>
 <if>
 <branch type="IF" condition="$CREATE_EXCEL_WORKBOOK_MSG=='PASS'">
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.910443" level="INFO">${ROW_HEADER_1} = ['S.NO', 'NAME', 'AGE']</msg>
+<msg time="2024-11-05T20:19:39.883431" level="INFO">${ROW_HEADER_1} = ['S.NO', 'NAME', 'AGE']</msg>
 <var>${ROW_HEADER_1}</var>
 <arg>S.NO</arg>
 <arg>NAME</arg>
 <arg>AGE</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.000000"/>
 </kw>
 <kw name="WRITE_EXCEL_ROW_DATA">
 <try>
@@ -67,62 +67,62 @@
 <arg>filename=${EXCEL_NAME}</arg>
 <arg>doc_id=${ID}</arg>
 <doc>Opens xlsx document file.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.016088"/>
 </kw>
 <kw name="Write Excel Row" owner="ExcelLibrary">
 <arg>row_num=${ROW_NUM}</arg>
 <arg>row_data=${DATA}</arg>
 <doc>Writes a row to the document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </kw>
 <kw name="Save Excel Document" owner="ExcelLibrary">
 <arg>filename=${EXCEL_NAME}</arg>
 <doc>Saves the current document to disk.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.015661"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </kw>
 <kw name="Close Current Excel Document" owner="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.926104" level="INFO">${MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.899519" level="INFO">${MSG} = PASS</msg>
 <var>${MSG}</var>
 <arg>PASS</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.015661"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.016088"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>FAILED</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:06.926104" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:06.926104" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.015661"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.016088"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </return>
 <arg>EXCEL_NAME=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <arg>ROW_NUM=1</arg>
 <arg>DATA=${ROW_HEADER_1}</arg>
 <arg>ID=excel_1</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:06.910443" elapsed="0.015661"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.016088"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.926104" level="INFO">${ROW_VALUE_1} = ['1', 'AKASH KESARWANI', '26']</msg>
+<msg time="2024-11-05T20:19:39.899519" level="INFO">${ROW_VALUE_1} = ['1', 'AKASH KESARWANI', '26']</msg>
 <var>${ROW_VALUE_1}</var>
 <arg>1</arg>
 <arg>AKASH KESARWANI</arg>
 <arg>26</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.000000"/>
 </kw>
 <kw name="WRITE_EXCEL_ROW_DATA">
 <try>
@@ -131,62 +131,62 @@
 <arg>filename=${EXCEL_NAME}</arg>
 <arg>doc_id=${ID}</arg>
 <doc>Opens xlsx document file.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.015586"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.015634"/>
 </kw>
 <kw name="Write Excel Row" owner="ExcelLibrary">
 <arg>row_num=${ROW_NUM}</arg>
 <arg>row_data=${DATA}</arg>
 <doc>Writes a row to the document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.941690" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.915153" elapsed="0.000000"/>
 </kw>
 <kw name="Save Excel Document" owner="ExcelLibrary">
 <arg>filename=${EXCEL_NAME}</arg>
 <doc>Saves the current document to disk.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.941690" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.915153" elapsed="0.015665"/>
 </kw>
 <kw name="Close Current Excel Document" owner="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.941690" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.941690" level="INFO">${MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.930818" level="INFO">${MSG} = PASS</msg>
 <var>${MSG}</var>
 <arg>PASS</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.941690" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.015586"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.031299"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>FAILED</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:06.941690" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:06.941690" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.015586"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.031299"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:06.941690" elapsed="0.015663"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </return>
 <arg>EXCEL_NAME=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <arg>ROW_NUM=2</arg>
 <arg>DATA=${ROW_VALUE_1}</arg>
 <arg>ID=excel_1</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:06.926104" elapsed="0.031249"/>
+<status status="PASS" start="2024-11-05T20:19:39.899519" elapsed="0.031299"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.957353" level="INFO">${ROW_VALUE_2} = ['2', 'MANAS KESARWANI', '14']</msg>
+<msg time="2024-11-05T20:19:39.930818" level="INFO">${ROW_VALUE_2} = ['2', 'MANAS KESARWANI', '14']</msg>
 <var>${ROW_VALUE_2}</var>
 <arg>2</arg>
 <arg>MANAS KESARWANI</arg>
 <arg>14</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </kw>
 <kw name="WRITE_EXCEL_ROW_DATA">
 <try>
@@ -195,62 +195,62 @@
 <arg>filename=${EXCEL_NAME}</arg>
 <arg>doc_id=${ID}</arg>
 <doc>Opens xlsx document file.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.000000"/>
 </kw>
 <kw name="Write Excel Row" owner="ExcelLibrary">
 <arg>row_num=${ROW_NUM}</arg>
 <arg>row_data=${DATA}</arg>
 <doc>Writes a row to the document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.015627"/>
 </kw>
 <kw name="Save Excel Document" owner="ExcelLibrary">
 <arg>filename=${EXCEL_NAME}</arg>
 <doc>Saves the current document to disk.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.016091"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </kw>
 <kw name="Close Current Excel Document" owner="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.973444" level="INFO">${MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.946445" level="INFO">${MSG} = PASS</msg>
 <var>${MSG}</var>
 <arg>PASS</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.016091"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.015627"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>FAILED</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:06.973444" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:06.973444" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.016091"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.015627"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </return>
 <arg>EXCEL_NAME=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <arg>ROW_NUM=3</arg>
 <arg>DATA=${ROW_VALUE_2}</arg>
 <arg>ID=excel_1</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:06.957353" elapsed="0.016091"/>
+<status status="PASS" start="2024-11-05T20:19:39.930818" elapsed="0.015627"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.973444" level="INFO">${ROW_VALUE_3} = ['3', 'ABHAY KESARWANI', '23']</msg>
+<msg time="2024-11-05T20:19:39.946445" level="INFO">${ROW_VALUE_3} = ['3', 'ABHAY KESARWANI', '23']</msg>
 <var>${ROW_VALUE_3}</var>
 <arg>3</arg>
 <arg>ABHAY KESARWANI</arg>
 <arg>23</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.000000"/>
 </kw>
 <kw name="WRITE_EXCEL_ROW_DATA">
 <try>
@@ -259,62 +259,62 @@
 <arg>filename=${EXCEL_NAME}</arg>
 <arg>doc_id=${ID}</arg>
 <doc>Opens xlsx document file.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.015673"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.015583"/>
 </kw>
 <kw name="Write Excel Row" owner="ExcelLibrary">
 <arg>row_num=${ROW_NUM}</arg>
 <arg>row_data=${DATA}</arg>
 <doc>Writes a row to the document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.962028" elapsed="0.000000"/>
 </kw>
 <kw name="Save Excel Document" owner="ExcelLibrary">
 <arg>filename=${EXCEL_NAME}</arg>
 <doc>Saves the current document to disk.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.962028" elapsed="0.000000"/>
 </kw>
 <kw name="Close Current Excel Document" owner="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.962028" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.989117" level="INFO">${MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.962028" level="INFO">${MSG} = PASS</msg>
 <var>${MSG}</var>
 <arg>PASS</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.962028" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.015673"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.015583"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>FAILED</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.962028" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.962028" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.015673"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.015583"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.962028" elapsed="0.015663"/>
 </return>
 <arg>EXCEL_NAME=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <arg>ROW_NUM=4</arg>
 <arg>DATA=${ROW_VALUE_3}</arg>
 <arg>ID=excel_1</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:06.973444" elapsed="0.015673"/>
+<status status="PASS" start="2024-11-05T20:19:39.946445" elapsed="0.031246"/>
 </kw>
 <kw name="Create List" owner="BuiltIn">
-<msg time="2024-11-05T20:14:06.989117" level="INFO">${ROW_VALUE_4} = ['4', 'SUJAL KESARWANI', '19']</msg>
+<msg time="2024-11-05T20:19:39.977691" level="INFO">${ROW_VALUE_4} = ['4', 'SUJAL KESARWANI', '19']</msg>
 <var>${ROW_VALUE_4}</var>
 <arg>4</arg>
 <arg>SUJAL KESARWANI</arg>
 <arg>19</arg>
 <doc>Returns a list containing given items.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.977691" elapsed="0.000000"/>
 </kw>
 <kw name="WRITE_EXCEL_ROW_DATA">
 <try>
@@ -323,151 +323,151 @@
 <arg>filename=${EXCEL_NAME}</arg>
 <arg>doc_id=${ID}</arg>
 <doc>Opens xlsx document file.</doc>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.015586"/>
+<status status="PASS" start="2024-11-05T20:19:39.977691" elapsed="0.000000"/>
 </kw>
 <kw name="Write Excel Row" owner="ExcelLibrary">
 <arg>row_num=${ROW_NUM}</arg>
 <arg>row_data=${DATA}</arg>
 <doc>Writes a row to the document.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.004703" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.977691" elapsed="0.000000"/>
 </kw>
 <kw name="Save Excel Document" owner="ExcelLibrary">
 <arg>filename=${EXCEL_NAME}</arg>
 <doc>Saves the current document to disk.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.004703" elapsed="0.015663"/>
+<status status="PASS" start="2024-11-05T20:19:39.991238" elapsed="0.002509"/>
 </kw>
 <kw name="Close Current Excel Document" owner="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.993747" elapsed="0.000000"/>
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2024-11-05T20:14:07.020366" level="INFO">${MSG} = PASS</msg>
+<msg time="2024-11-05T20:19:39.993747" level="INFO">${MSG} = PASS</msg>
 <var>${MSG}</var>
 <arg>PASS</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.993747" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.031249"/>
+<status status="PASS" start="2024-11-05T20:19:39.977691" elapsed="0.016056"/>
 </branch>
 <branch type="EXCEPT">
 <kw name="Set Variable" owner="BuiltIn">
 <var>${MSG}</var>
 <arg>FAILED</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.993747" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:39.993747" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.031249"/>
+<status status="PASS" start="2024-11-05T20:19:39.977691" elapsed="0.016056"/>
 </try>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.993747" elapsed="0.000000"/>
 </return>
 <arg>EXCEL_NAME=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <arg>ROW_NUM=5</arg>
 <arg>DATA=${ROW_VALUE_4}</arg>
 <arg>ID=excel_1</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:06.989117" elapsed="0.031249"/>
+<status status="PASS" start="2024-11-05T20:19:39.977691" elapsed="0.016056"/>
 </kw>
 <kw name="READ_EXCEL_SHEET_DATA">
 <kw name="Open Workbook" owner="ExcellentLibrary">
 <arg>file_path=${EXCEL_PATH}</arg>
 <doc>Opens the workbook found at the given file path.
 _NOTE_: Please note that at present _XLS_ files are not supported.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:39.993747" elapsed="0.015672"/>
 </kw>
 <kw name="Read Sheet Data" owner="ExcellentLibrary">
-<msg time="2024-11-05T20:14:07.020366" level="INFO">${MSG} = [['S.NO', 'NAME', 'AGE'], ['1', 'AKASH KESARWANI', '26'], ['2', 'MANAS KESARWANI', '14'], ['3', 'ABHAY KESARWANI', '23'], ['4', 'SUJAL KESARWANI', '19']]</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">${MSG} = [['S.NO', 'NAME', 'AGE'], ['1', 'AKASH KESARWANI', '26'], ['2', 'MANAS KESARWANI', '14'], ['3', 'ABHAY KESARWANI', '23'], ['4', 'SUJAL KESARWANI', '19']]</msg>
 <var>${MSG}</var>
 <doc>Reads all the data from the active sheet.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.020366" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <kw name="Close Current Excel Document" owner="ExcelLibrary">
 <doc>Closes current document.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <return>
 <value>${MSG}</value>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </return>
-<msg time="2024-11-05T20:14:07.035991" level="INFO">${ALL_EXCEL_SHEET_DATA} = [['S.NO', 'NAME', 'AGE'], ['1', 'AKASH KESARWANI', '26'], ['2', 'MANAS KESARWANI', '14'], ['3', 'ABHAY KESARWANI', '23'], ['4', 'SUJAL KESARWANI', '19']]</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">${ALL_EXCEL_SHEET_DATA} = [['S.NO', 'NAME', 'AGE'], ['1', 'AKASH KESARWANI', '26'], ['2', 'MANAS KESARWANI', '14'], ['3', 'ABHAY KESARWANI', '23'], ['4', 'SUJAL KESARWANI', '19']]</msg>
 <var>${ALL_EXCEL_SHEET_DATA}</var>
 <arg>EXCEL_PATH=.\\config\\excel\\Excel_Sheet.xlsx</arg>
 <tag>robot:continue-on-failure</tag>
-<status status="PASS" start="2024-11-05T20:14:07.020366" elapsed="0.015625"/>
+<status status="PASS" start="2024-11-05T20:19:39.993747" elapsed="0.015672"/>
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2024-11-05T20:14:07.035991" level="INFO">Length is 5.</msg>
-<msg time="2024-11-05T20:14:07.035991" level="INFO">${END} = 5</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">Length is 5.</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">${END} = 5</msg>
 <var>${END}</var>
 <arg>${ALL_EXCEL_SHEET_DATA}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <for flavor="IN RANGE">
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-05T20:14:07.035991" level="INFO">['1', 'AKASH KESARWANI', '26']</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">['1', 'AKASH KESARWANI', '26']</msg>
 <arg>${ALL_EXCEL_SHEET_DATA}[${counter}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <var name="${counter}">1</var>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-05T20:14:07.035991" level="INFO">['2', 'MANAS KESARWANI', '14']</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">['2', 'MANAS KESARWANI', '14']</msg>
 <arg>${ALL_EXCEL_SHEET_DATA}[${counter}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <var name="${counter}">2</var>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-05T20:14:07.035991" level="INFO">['3', 'ABHAY KESARWANI', '23']</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">['3', 'ABHAY KESARWANI', '23']</msg>
 <arg>${ALL_EXCEL_SHEET_DATA}[${counter}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <var name="${counter}">3</var>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </iter>
 <iter>
 <kw name="Log" owner="BuiltIn">
-<msg time="2024-11-05T20:14:07.035991" level="INFO">['4', 'SUJAL KESARWANI', '19']</msg>
+<msg time="2024-11-05T20:19:40.009419" level="INFO">['4', 'SUJAL KESARWANI', '19']</msg>
 <arg>${ALL_EXCEL_SHEET_DATA}[${counter}]</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
 <var name="${counter}">4</var>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </iter>
 <var>${counter}</var>
 <value>1</value>
 <value>${END}</value>
 <value>++1</value>
-<status status="PASS" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="PASS" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </for>
-<status status="PASS" start="2024-11-05T20:14:06.894853" elapsed="0.141138"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.125988"/>
 </branch>
 <branch type="ELSE">
 <kw name="Log" owner="BuiltIn">
 <arg>CREATE_EXCEL_WORKBOOK method failed!!</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="NOT RUN" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </kw>
-<status status="NOT RUN" start="2024-11-05T20:14:07.035991" elapsed="0.000000"/>
+<status status="NOT RUN" start="2024-11-05T20:19:40.009419" elapsed="0.000000"/>
 </branch>
-<status status="PASS" start="2024-11-05T20:14:06.894853" elapsed="0.141138"/>
+<status status="PASS" start="2024-11-05T20:19:39.883431" elapsed="0.125988"/>
 </if>
-<status status="PASS" start="2024-11-05T20:14:06.879182" elapsed="0.156809"/>
+<status status="PASS" start="2024-11-05T20:19:39.852183" elapsed="0.157236"/>
 </test>
-<status status="PASS" start="2024-11-05T20:14:05.988823" elapsed="1.047168"/>
+<status status="PASS" start="2024-11-05T20:19:39.208933" elapsed="0.800486"/>
 </suite>
 <statistics>
 <total>
