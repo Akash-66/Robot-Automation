@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2025-01-06T19:24:01.447689" rpa="false" schemaversion="5">
+<robot generator="Robot 7.0.1 (Python 3.9.13 on win32)" generated="2025-01-06T19:52:54.860743" rpa="false" schemaversion="5">
 <suite id="s1" name="DemoKeywordTestCase" source="E:\GitHub\Robot-Automation\Codes\DemoKeywordTestCase.robot">
-<test id="s1-t1" name="Case_2" line="8">
+<test id="s1-t1" name="DEMOKEYWORD_API_GET_METHOD" line="8">
 <kw name="JSON API GET METHOD" owner="DemoKeyword">
-<msg time="2025-01-06T19:24:02.170706" level="INFO">${response_api} = {'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}</msg>
+<msg time="2025-01-06T19:52:55.539834" level="INFO">${response_api} = {'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}</msg>
 <var>${response_api}</var>
 <arg>https://jsonplaceholder.typicode.com/todos/1</arg>
-<status status="PASS" start="2025-01-06T19:24:01.611184" elapsed="0.559522"/>
+<status status="PASS" start="2025-01-06T19:52:55.006504" elapsed="0.533330"/>
 </kw>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-01-06T19:24:02.170706" level="INFO">{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}</msg>
+<msg time="2025-01-06T19:52:55.539834" level="INFO">{'userId': 1, 'id': 1, 'title': 'delectus aut autem', 'completed': False}</msg>
 <arg>${response_api}</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-01-06T19:24:02.170706" elapsed="0.000000"/>
+<status status="PASS" start="2025-01-06T19:52:55.539834" elapsed="0.000000"/>
 </kw>
-<status status="PASS" start="2025-01-06T19:24:01.611184" elapsed="0.559522"/>
+<status status="PASS" start="2025-01-06T19:52:55.006504" elapsed="0.533330"/>
 </test>
-<status status="PASS" start="2025-01-06T19:24:01.463358" elapsed="0.707348"/>
+<status status="PASS" start="2025-01-06T19:52:54.870158" elapsed="0.669676"/>
 </suite>
 <statistics>
 <total>
