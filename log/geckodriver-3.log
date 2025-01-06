@@ -1,0 +1,28 @@
+1736167906906	geckodriver	INFO	Listening on 127.0.0.1:51573
+1736167909983	mozrunner::runner	INFO	Running command: "C:\\Users\\akash\\.cache\\selenium\\firefox\\win64\\133.0.3\\firefox.exe" "--marionette" "--remote-debuggin ... 4" "--remote-allow-hosts" "localhost" "-no-remote" "-profile" "C:\\Users\\akash\\AppData\\Local\\Temp\\rust_mozprofilelYeOsL"
+console.warn: services.settings: Ignoring preference override of remote settings server
+console.warn: services.settings: Allow by setting MOZ_REMOTE_SETTINGS_DEVTOOLS=1 in the environment
+Dynamically enable window occlusion 0
+1736167911342	Marionette	INFO	Marionette enabled
+1736167911556	Marionette	INFO	Listening on port 51586
+WebDriver BiDi listening on ws://127.0.0.1:51574
+Read port: 51586
+1736167911724	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
+DevTools listening on ws://127.0.0.1:51574/devtools/browser/171f44e8-40da-42a8-b5a3-6984ea7a7d73
+1736167915273	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1736167915274	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1736167915275	Marionette	WARN	Ignoring event 'DOMContentLoaded' because document has an invalid readyState of 'complete'.
+1736167917547	Marionette	INFO	Stopped listening on port 51586
+JavaScript warning: https://www.google.com/js/th/WuArCo6uiOC32QOIiNWeSH9h2H5vf_jv_ihZ0ZQebSo.js line 2 > eval line 1197 > eval line 1 > eval line 1 > eval, line 1: Script terminated by timeout at:
+E@https://www.google.com/js/th/WuArCo6uiOC32QOIiNWeSH9h2H5vf_jv_ihZ0ZQebSo.js line 2 > eval line 1197 > eval line 1 > eval line 1 > eval:1:310
+
+JavaScript warning: https://robotframework.org/js/509.3c84c337.js, line 52: Script terminated by timeout at:
+value@https://robotframework.org/js/509.3c84c337.js:52:411572
+value@https://robotframework.org/js/509.3c84c337.js:52:937185
+value@https://robotframework.org/js/509.3c84c337.js:52:936812
+43151/n/i._updateBracketsSoon<@https://robotframework.org/js/509.3c84c337.js:52:934306
+value@https://robotframework.org/js/509.3c84c337.js:1:712373
+value@https://robotframework.org/js/509.3c84c337.js:1:712315
+
+Dynamically enable window occlusion 1
+JavaScript warning: https://www.google.com/js/th/WuArCo6uiOC32QOIiNWeSH9h2H5vf_jv_ihZ0ZQebSo.js line 2 > eval line 1197 > eval line 1 > eval line 1 > eval, line 1: WEBGL_debug_renderer_info is deprecated in Firefox and will be removed. Please use RENDERER.
